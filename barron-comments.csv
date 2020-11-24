@@ -1,4 +1,4 @@
-﻿event_id,event_date,event_type,event_location,covid_names_txt,covid_names_score,sick_duration_txt,sick_duration_score_min,age_txt,age_score,health_txt,health_score,strong_txt,strong_score,young_txt,young_score,tall_txt,tall_score,attractive_txt,attractive_score,good_txt,good_score,smart_txt,smart_score
+event_id,event_date,event_type,event_location,covid_names_txt,covid_names_score,sick_duration_txt,sick_duration_score_min,age_txt,age_score,health_txt,health_score,strong_txt,strong_score,young_txt,young_score,tall_txt,tall_score,attractive_txt,attractive_score,good_txt,good_score,smart_txt,smart_score
 1,14-Oct,Campaign Rally,"Des Moines, IA",21,21,2 seconds,0.033333333,,,,,,,,,,,beautiful and free,3,,,,
 2,15-Oct,Fox Business News,"Washington, DC",,,very quickly,0,,,,,strong,1,young,1,,,,,,,,
 2.5,15-Oct,Campaign Rally,"Greenville, NC",,,so fast,0,,,,,,,,,"tall, very tall",1.5,"beautiful, handsome",2,,,,
