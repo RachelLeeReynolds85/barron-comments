@@ -9,19 +9,33 @@
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 </head>
 <body>
-    <div id="myPlot"></div>
+    <div class="container">
+        <div class="display-4">
+            <p>Barron Comments</p>
+        </div>
+        <div class="lead">
+            <p>A timeline of President Trump's remarks on Barron Trump's positive COVID-19 diagnosis</p>
+        </div>
+        <div id="myPlot"></div>
+        <div>
+            <p>Barron Trump was first reported to have tested positive for COVID-19 on 14 Oct 2020.  This is a visualization of President Trump's remarks about Barron Trump's diagnosis from 14 Oct - 2 Nov 2020.</p>
+            <p>Source data on President Trump's speeches can be found at the >> <a href="https://factba.se/search#barron%2Bpositive">factba.se website</a>.</p>
+            <p>Source code for this visualization is at this >> <a href="https://github.com/RachelLeeReynolds85/barron-comments">git repo</a>.</p>
+            {{ speeches | safe }}
+        </div>
+    </div>
 </body>
+
+
+
 <script>
     const data = {{ data | safe }}
     const layout = {{ layout | safe }}
+    const config = {{ config | safe }}
     console.log(data)
     console.log(layout)
-    Plotly.newPlot("myPlot", data, layout)
+    console.log(config)
+    Plotly.newPlot("myPlot", data, layout, config)
 </script>
-<div>
-    <p>Barron Trump was first reported to have tested positive for COVID-19 on 14 Oct 2020.  This is a visualization of President Trump's remarks about Barron Trump's diagnosis from 14 Oct - 2 Nov 2020.</p>
-    <p>Source data on President Trump's speeches can be found at the >> <a href="https://factba.se/search#barron%2Bpositive">factba.se website</a>.</p>
-    <p>Source code for this visualization is at this >> <a href="https://github.com/RachelLeeReynolds85/barron-comments">git repo</a>.</p>
-    {{ speeches | safe }}
-</div>
+
 </html>

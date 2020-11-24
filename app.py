@@ -144,8 +144,8 @@ def create_plot():
     plot_data = [trace1, trace2, trace3, trace4, trace5, trace6, trace7, trace8, trace9, trace10]
 
     plot_layout = {
-        "title": "Barron Comments Timeline",
-        "width": 1500,
+        # "title": "Barron Comments Timeline",
+        # "width": 1500,
         "height": 700,
         "margin": {
             "l": 10,
@@ -160,17 +160,19 @@ def create_plot():
             "x": 0.15
         },
         "xaxis": {
-            "title": {
-                "text": "Event",
-                "font": {"color": "black"},
-            },
+            # "title": {
+            #     "text": "Event",
+            #     "font": {"color": "black"},
+            # },
             "tickfont": {
                 "color": "black",
             },
             "showgrid": True,
+            "zeroline": False,
             "tickmode": "array",
             "tickvals": [d["event_id"] for d in data],
             "ticktext": [d["event_date"] + " " + d["event_type"] + ", " + d["event_location"] for d in data],
+            "range": [0.5, 19],
             "tickangle": 60,
         },
         "yaxis": {
@@ -180,17 +182,22 @@ def create_plot():
         },
     }
 
+    plot_config = {
+        "responsive": True,
+    }
+
     data = json.dumps(plot_data, cls=plotly.utils.PlotlyJSONEncoder)
     layout = json.dumps(plot_layout, cls=plotly.utils.PlotlyJSONEncoder)
+    config = json.dumps(plot_config, cls=plotly.utils.PlotlyJSONEncoder)
 
-    return data, layout
+    return data, layout, config
 
 
 @app.route("/")
 def home():
-    data, layout = create_plot()
+    data, layout, config = create_plot()
     speeches = get_search_results()
-    return render_template("index.html", data=data, layout=layout, speeches=speeches)
+    return render_template("index.html", data=data, layout=layout, config=config, speeches=speeches)
 
 
 if __name__ == "__main__":
