@@ -31,7 +31,7 @@ def create_plot():
     data = load_data()
 
     trace1 = {
-    "x": [d["ï»¿event_id"] for d in data],
+    "x": [d["event_id"] for d in data],
     "y": [d["covid_names_score"] for d in data],
     "mode": "lines+markers",
     "name": "How many names there are for COVID",
@@ -43,7 +43,7 @@ def create_plot():
     }
 
     trace2 = {
-        "x": [d["ï»¿event_id"] for d in data],
+        "x": [d["event_id"] for d in data],
         "y": [d["sick_duration_score_min"] for d in data],
         "mode": "lines+markers",
         "name": "How quickly Barron got better",
@@ -54,7 +54,7 @@ def create_plot():
     }
 
     trace3 = {
-        "x": [d["ï»¿event_id"] for d in data],
+        "x": [d["event_id"] for d in data],
         "y": [d["age_score"] for d in data],
         "mode": "lines+markers",
         "name": "Barron's age",
@@ -65,7 +65,7 @@ def create_plot():
     }
 
     trace4 = {
-        "x": [d["ï»¿event_id"] for d in data],
+        "x": [d["event_id"] for d in data],
         "y": [d["health_score"] for d in data],
         "mode": "lines+markers",
         "name": "'Health' comments",
@@ -76,7 +76,7 @@ def create_plot():
     }
 
     trace5 = {
-        "x": [d["ï»¿event_id"] for d in data],
+        "x": [d["event_id"] for d in data],
         "y": [d["strong_score"] for d in data],
         "mode": "lines+markers",
         "name": "'Strong' comments",
@@ -87,7 +87,7 @@ def create_plot():
     }
 
     trace6 = {
-        "x": [d["ï»¿event_id"] for d in data],
+        "x": [d["event_id"] for d in data],
         "y": [d["young_score"] for d in data],
         "mode": "lines+markers",
         "name": "'Young' comments",
@@ -98,7 +98,7 @@ def create_plot():
     }
 
     trace7 = {
-        "x": [d["ï»¿event_id"] for d in data],
+        "x": [d["event_id"] for d in data],
         "y": [d["tall_score"] for d in data],
         "mode": "lines+markers",
         "name": "'Tall' comments",
@@ -109,7 +109,7 @@ def create_plot():
     }
 
     trace8 = {
-        "x": [d["ï»¿event_id"] for d in data],
+        "x": [d["event_id"] for d in data],
         "y": [d["attractive_score"] for d in data],
         "mode": "lines+markers",
         "name": "Attractiveness comments",
@@ -120,7 +120,7 @@ def create_plot():
     }
 
     trace9 = {
-        "x": [d["ï»¿event_id"] for d in data],
+        "x": [d["event_id"] for d in data],
         "y": [d["good_score"] for d in data],
         "mode": "lines+markers",
         "name": "'Good' comments",
@@ -131,7 +131,7 @@ def create_plot():
     }
 
     trace10 = {
-        "x": [d["ï»¿event_id"] for d in data],
+        "x": [d["event_id"] for d in data],
         "y": [d["smart_score"] for d in data],
         "mode": "lines+markers",
         "name": "'Smart' comments",
@@ -169,7 +169,7 @@ def create_plot():
             },
             "showgrid": True,
             "tickmode": "array",
-            "tickvals": [d["ï»¿event_id"] for d in data],
+            "tickvals": [d["event_id"] for d in data],
             "ticktext": [d["event_date"] + " " + d["event_type"] + ", " + d["event_location"] for d in data],
             "tickangle": 60,
         },
