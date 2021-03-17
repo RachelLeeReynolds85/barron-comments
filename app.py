@@ -155,10 +155,16 @@ def create_plot():
         },
         "legend": {
             "yanchor": "top",
-            "y": 0.99,
+            "y": 1,
             "xanchor": "left",
-            "x": 0.15
+            "x": 0.05,
+            "orientation": "h",
+            "font": {
+                "size": 11,
+            },
+            "bgcolor": "rgba(256, 256, 256, 0.3)"
         },
+        # "legend_orientation": "v",
         "xaxis": {
             # "title": {
             #     "text": "Event",
@@ -179,6 +185,7 @@ def create_plot():
             "showgrid": False,
             "visible": False,
             "zeroline": False,
+            "range": [-2, 37],
         },
     }
 
